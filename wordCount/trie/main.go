@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"os"
+	"strings"
 	"bufio"
 	"log"
 )
@@ -58,7 +59,7 @@ func display(root *trieNode, str []rune,w *bufio.Writer){
 
 func main() {
 	trie := initTrie()
-	file, err := os.Open("/Users/vipul/workspace/go/src/vipulktiwari/Go-In-Action/pubmatic/Data/names.txt")
+	file, err := os.Open("/Users/vipul/workspace/go/src/vipulktiwari/Go-In-Action/wordCount/Data/names.txt")
     if err != nil {
         log.Fatal(err)
     }
@@ -67,7 +68,7 @@ func main() {
 	scanner.Split(bufio.ScanWords)
     for scanner.Scan() {
 		str := scanner.Text()
-		trie.insert(str)
+		trie.insert(strings.ToLower(str))
     }
     if err := scanner.Err(); err != nil {
         log.Fatal(err)

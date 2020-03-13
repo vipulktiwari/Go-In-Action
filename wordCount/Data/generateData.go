@@ -22,9 +22,8 @@ const numberOfLines = 100
 
  
 
-var names = []string{"depak", "murad", "sachin", "pramod", "aditi", "shalmali", "sanesh", "abhinav", "shashank", "viral", "satwik"}
-
- 
+var names = []string{"Depak", "Murad", "Sachin", "Pramod", "Aditi", "Shalmali", "Ganesh", "Abhinav", "Shashank", "Viral", "Satwik",
+    "Prashant", "Dattaprasad", "Mike", "Harshad"}
 
 func main() {
 
