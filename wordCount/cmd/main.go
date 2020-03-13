@@ -9,7 +9,7 @@ import (
 
 func main() {
 	//open input file
-	file, err := os.Open("/Users/vipul/workspace/go/src/vipulktiwari/Go-In-Action/pubmatic/Data/names.txt")
+	file, err := os.Open("/Users/vipul/workspace/go/src/vipulktiwari/Go-In-Action/wordCount/Data/names.txt")
     if err != nil {
         log.Fatal(err)
     }
