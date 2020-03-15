@@ -53,13 +53,14 @@ func display(root *trieNode, str []rune,w *bufio.Writer){
         if (root.childrens[i] != nil){
 			str = append(str,rune(i+'a'))
 			display(root.childrens[i],str,w)
+                        str = str[:len(str)-1]
 		}
     }
 }
 
 func main() {
 	trie := initTrie()
-	file, err := os.Open("/Users/vipul/workspace/go/src/vipulktiwari/Go-In-Action/wordCount/Data/names.txt")
+	file, err := os.Open("/home/vipult/go/src/Go-In-Action/wordCount/Data/names.txt")
     if err != nil {
         log.Fatal(err)
     }
